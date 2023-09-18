@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href=""?>
+<configuration scan="true" scanPeriod="60 seconds" >
+	<!-- Property -->
+	<property name="LOG_PATTERN_DEFAULT" value="%-5p, [%d{HH:mm:ss.SSS}], [%-30c{30}] : %m%n" />
+<!-- 	<property name="LOG_PATTERN_DEFAULT" value="%-5p, [%d{HH:mm:ss.SSS}], [%t{10}@%C{20}.%M{10}] : %m%n" /> -->
+<!-- 	<property name="LOG_PATTERN_DEFAULT" value="%-5p, [%d{HH:mm:ss.SSS}], [%c{30}.%thread], %m %n" /> -->
+
+	<property name="LOG_RETENTION_PERIOD_DAY" value="14" />
+	<property name="LOG_FILE_UNIT_SIZE" value="50MB" />
+	<property name="LOG_DIR" value="./logs" />
+<!-- 	<property name="LOG_PATTERN" value="%-5p, [%d{yyyy/MM/dd HH:mm:ss.SSS}], [%logger{30}.%thread], %m %n" /> -->
+<!-- 	<property resource="${user.dir}\conf\context.properties"/> -->
+	
+	<!-- Console Appender -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+<!--         	<pattern>%-5p, [%d{HH:mm:ss.SSS}], %m %n</pattern> -->
+<!--         	<pattern>%-5p, [%d{HH:mm:ss.SSS}], [%t@%C.%M] : %m%n</pattern> -->
+        	<pattern>${LOG_PATTERN_DEFAULT}</pattern>
+        </encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>	        
+    </appender>
+    
+    <!-- File Appender -->
+ 	<appender name="ApdrFile" class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+ 		<file>${LOG_DIR}/ballentine.log</file> 
+ 		<encoder> 
+ 			<pattern>${LOG_PATTERN_DEFAULT}</pattern> 
+ 		</encoder>		 
+ 		<append>true</append> 
+ 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> 
+ 			<fileNamePattern> 
+ 				${LOG_DIR}/ballentine_%d{yyyy-MM-dd}_%2i.log.zip 
+ 			</fileNamePattern> 
+ 			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP"> 
+ 				<maxFileSize>${LOG_FILE_UNIT_SIZE}</maxFileSize> 
+ 			</timeBasedFileNamingAndTriggeringPolicy> 
+ 			<maxHistory>${LOG_RETENTION_PERIOD_DAY}</maxHistory> 
+ 		</rollingPolicy> 
+<!-- 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter"> -->
+<!-- 			<level>WARN</level> -->
+<!-- 		</filter>		 -->
+ 	</appender>     
+   
+        
+        
+	<!-- ***************************************************************** -->        
+	<!-- service root logger -->
+	<!-- ***************************************************************** -->	    
+    <logger name="com.picoinnov" additivity="false">
+        <level value="INFO" />
+        <appender-ref ref="console" />
+        <appender-ref ref="ApdrFile"/> 
+    </logger> 
+    
+    <!-- ***************************************************************** -->
+	<!-- program root logger -->
+	<!-- ***************************************************************** -->
+	<root level="WARN">
+ 		<appender-ref ref="ApdrFile"/> 
+		<appender-ref ref="console" />
+	</root>     
+            
+</configuration>
+
+<!-- 
+<appender name="MAIN_LOG" class="ch.qos.logback.classic.sift.SiftingAppender">
+	<discriminator>
+		<key>SignalController</key>
+		<defaultValue>0</defaultValue>
+	</discriminator>
+	<sift>
+		<appender name="MAIN_LOG-${SignalController}"
+			class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<file>${user.dir}/log/${SignalController}.log</file>
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>${user.dir}/log/${SignalController}/${SignalController}_%d{yyyy-MM-dd}.%i.log.zip
+				</fileNamePattern>
+				<timeBasedFileNamingAndTriggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+					<maxFileSize>10MB</maxFileSize>
+				</timeBasedFileNamingAndTriggeringPolicy>
+				<maxHistory>7</maxHistory>
+			</rollingPolicy>
+			<encoder>
+				<pattern>%d %5p | %m | %-15logger{15} %n</pattern>
+			</encoder>
+		</appender>
+	</sift>
+</appender>
+
+<appender name="queue" class="ch.qos.logback.classic.AsyncAppender">
+	<discardingThreshold>0</discardingThreshold>
+	<queueSize>100000</queueSize>
+	<appender-ref ref="MAIN_LOG" />
+</appender>
+
+<logger name="PacketSendReceiveLog">
+	<level value="INFO" />
+	<appender-ref ref="queue" />
+</logger>
+
+-->

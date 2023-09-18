@@ -1,0 +1,218 @@
+INFO , [14:58:54.012], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 7060 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [14:58:54.016], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+INFO , [14:58:54.918], [c.p.b.BallentineApplication   ] : Started BallentineApplication in 1.286 seconds (process running for 1.824)
+ERROR, [14:59:03.641], [c.p.b.c.PrinterController     ] : null
+java.awt.HeadlessException: null
+	at com.picoinnov.ballentine.controller.PrinterController.print(PrinterController.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+INFO , [14:59:03.643], [c.p.b.c.PrinterController     ] : return status : 404, Origin : http://localhost:8080
+WARN , [15:00:05.551], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [PrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyLocalPrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$PrinterChangeListener.run(PrintServiceLookupProvider.java:321)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+WARN , [15:00:05.552], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [RemotePrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyRemotePrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$RemotePrinterChangeListener.run(PrintServiceLookupProvider.java:328)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+INFO , [15:00:07.253], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 30212 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [15:00:07.254], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+INFO , [15:00:08.177], [c.p.b.BallentineApplication   ] : Started BallentineApplication in 1.295 seconds (process running for 1.861)
+ERROR, [15:00:15.433], [c.p.b.c.PrinterController     ] : null
+java.awt.HeadlessException: null
+	at com.picoinnov.ballentine.controller.PrinterController.print(PrinterController.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+INFO , [15:00:15.435], [c.p.b.c.PrinterController     ] : return status : 404, Origin : http://localhost:8080
+WARN , [15:14:42.914], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [PrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyLocalPrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$PrinterChangeListener.run(PrintServiceLookupProvider.java:321)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+WARN , [15:14:42.915], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [RemotePrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyRemotePrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$RemotePrinterChangeListener.run(PrintServiceLookupProvider.java:328)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+INFO , [15:14:44.585], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 22404 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [15:14:44.587], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+INFO , [15:14:45.472], [c.p.b.BallentineApplication   ] : Started BallentineApplication in 1.245 seconds (process running for 1.78)
+INFO , [15:14:50.331], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_LABEL
+INFO , [15:14:50.332], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+INFO , [15:15:04.715], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_LABEL
+INFO , [15:15:04.716], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+INFO , [15:15:09.164], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_DOCU
+INFO , [15:15:09.166], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+WARN , [15:16:05.157], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [PrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyLocalPrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$PrinterChangeListener.run(PrintServiceLookupProvider.java:321)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+WARN , [15:16:05.158], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [RemotePrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyRemotePrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$RemotePrinterChangeListener.run(PrintServiceLookupProvider.java:328)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+INFO , [15:38:15.978], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 14288 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [15:38:15.980], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+INFO , [15:38:16.851], [c.p.b.BallentineApplication   ] : Started BallentineApplication in 1.217 seconds (process running for 1.757)
+INFO , [15:38:22.166], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_LABEL
+INFO , [15:38:22.167], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+WARN , [15:38:49.560], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [PrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyLocalPrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$PrinterChangeListener.run(PrintServiceLookupProvider.java:321)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+WARN , [15:38:49.561], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [RemotePrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyRemotePrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$RemotePrinterChangeListener.run(PrintServiceLookupProvider.java:328)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+INFO , [15:47:55.867], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 3424 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [15:47:55.868], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+INFO , [15:47:56.824], [c.p.b.BallentineApplication   ] : Started BallentineApplication in 1.357 seconds (process running for 1.926)
+INFO , [15:48:10.141], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_LABEL
+INFO , [15:48:10.142], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+WARN , [15:48:40.824], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [PrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyLocalPrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$PrinterChangeListener.run(PrintServiceLookupProvider.java:321)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+WARN , [15:48:40.825], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [RemotePrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyRemotePrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$RemotePrinterChangeListener.run(PrintServiceLookupProvider.java:328)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+INFO , [15:48:42.464], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 28736 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [15:48:42.465], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+INFO , [15:48:43.372], [c.p.b.BallentineApplication   ] : Started BallentineApplication in 1.261 seconds (process running for 1.788)
+INFO , [15:48:49.327], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_LABEL
+INFO , [15:48:49.328], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+WARN , [15:49:53.230], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [PrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyLocalPrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$PrinterChangeListener.run(PrintServiceLookupProvider.java:321)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+WARN , [15:49:53.231], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [RemotePrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyRemotePrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$RemotePrinterChangeListener.run(PrintServiceLookupProvider.java:328)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+INFO , [17:34:23.635], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 13632 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [17:34:23.637], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+WARN , [17:34:24.593], [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+ERROR, [17:34:24.619], [o.s.b.d.LoggingFailureAnalysisReporter] : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 1794 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 1794 or configure this application to listen on another port.
+
+INFO , [17:36:52.871], [c.p.b.BallentineApplication   ] : Starting BallentineApplication using Java 17.0.7 with PID 23136 (C:\dev\workspace\ballentine\target\classes started by LG in C:\dev\workspace\ballentine)
+INFO , [17:36:52.872], [c.p.b.BallentineApplication   ] : No active profile set, falling back to 1 default profile: "default"
+INFO , [17:36:53.840], [c.p.b.BallentineApplication   ] : Started BallentineApplication in 1.322 seconds (process running for 1.87)
+INFO , [17:37:10.452], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_LABEL
+INFO , [17:37:10.453], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+INFO , [17:37:15.483], [c.p.b.c.PrinterController     ] : PRINT SUCCESS : PRINTER_DOCU
+INFO , [17:37:15.483], [c.p.b.c.PrinterController     ] : return status : 200, Origin : http://localhost:8080
+WARN , [17:37:47.340], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [PrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyLocalPrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$PrinterChangeListener.run(PrintServiceLookupProvider.java:321)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+WARN , [17:37:47.341], [o.a.c.l.WebappClassLoaderBase ] : The web application [ROOT] appears to have started a thread named [RemotePrinterListener] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider.notifyRemotePrinterChange(Native Method)
+ java.desktop@17.0.7/sun.print.PrintServiceLookupProvider$RemotePrinterChangeListener.run(PrintServiceLookupProvider.java:328)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
